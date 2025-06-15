@@ -31,7 +31,7 @@ export default function AboutMe() {
             {/* Text Content - Takes up 2 columns */}
             <div className="md:col-span-2 space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
-              Hello! My name is Rachit, and I'm passionate about turning data into powerful, adaptable, and production-ready AI systems. My journey started with building a zero-day attack detection system that's when I fell in love with the way machine learning can solve real-world problems. From there, I went on to develop a search platform powered by large language models and implemented neural collaborative filtering networks to enable personalized recommendations, further fueling my passion for integrating cutting-edge technologies into scalable services.
+              Hello! My name is Rachit, and I&apos;m passionate about turning data into powerful, adaptable, and production-ready AI systems. My journey started with building a zero-day attack detection system that&apos;s when I fell in love with the way machine learning can solve real-world problems. From there, I went on to develop a search platform powered by large language models and implemented neural collaborative filtering networks to enable personalized recommendations, further fueling my passion for integrating cutting-edge technologies into scalable services.
               </p>
   
               <p className="text-gray-300 text-lg leading-relaxed">
@@ -72,7 +72,7 @@ export default function AboutMe() {
               {/* Background overlay with hover effect */}
               <div className="relative">
                 {/* Green tinted overlay */}
-                <div className="absolute inset-0 bg-green-500 opacity-3 rounded-lg group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
+                <div className="absolute inset-0 bg-green-500 opacity-10 rounded-lg group-hover z-5"></div>
                 
                 {/* Border effect */}
                 <div className="absolute -inset-2 border-2 border-green-500 rounded-lg group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300"></div>

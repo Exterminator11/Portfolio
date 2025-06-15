@@ -68,7 +68,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center mb-16">
           <span className="text-green-500 font-mono text-xl mr-4">03.</span>
-          <h2 className="text-4xl font-semibold text-white mr-8">Some stuff I've built</h2>
+          <h2 className="text-4xl font-semibold text-white mr-8">Some stuff I&apos;ve built</h2>
           <div className="flex-1 h-px bg-green-500"></div>
         </div>
 
