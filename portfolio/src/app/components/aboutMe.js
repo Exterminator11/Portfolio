@@ -74,13 +74,13 @@ export default function AboutMe() {
               
               {/* Image container */}
               <div className="relative w-full aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                {/* Green tinted overlay */}
-                <div className="absolute inset-0 bg-green-500 opacity-10 rounded-lg group-hover:opacity-20 transition-opacity z-10"></div>
                 
                 <Image
-                  src="/IMG_3355.jpg"
-                  alt="Rachit Das"
+                  src="/profile.jpeg"
+                  alt="Image"
                   fill
+                  sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+                  quality={85}
                   className="object-cover rounded-lg"
                   priority
                 />
