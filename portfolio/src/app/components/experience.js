@@ -39,55 +39,75 @@ const Experience = () => {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen px-8">
-      <div className="max-w-6xl mx-auto">
-      <div className="flex items-center mb-16">
-            <span className="text-green-500 font-mono text-xl mr-4">02.</span>
-            <h2 className="text-4xl font-semibold text-white mr-8">Experience</h2>
-            <div className="flex-1 h-px bg-green-500"></div>
+    <div className="section bg-black text-white">
+      <div className="container">
+        <div className="flex items-center mb-8 md:mb-12">
+          <span className="text-green-500 font-mono text-lg md:text-xl mr-4">02.</span>
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mr-4 md:mr-8">Experience</h2>
+          <div className="flex-1 h-px bg-green-500"></div>
         </div>
         
-        <div className="flex gap-8">
-          {/* Left sidebar - Company list */}
-          <div className="flex flex-col min-w-[200px]">
-            {Object.keys(companies).map((company) => (
-              <button
-                key={company}
-                onClick={() => setSelectedCompany(company)}
-                className={`text-left px-6 py-4 font-mono text-sm transition-all duration-200 border-l-2 ${
-                  selectedCompany === company
-                    ? 'border-green-500 bg-green-500/10 text-green-500'
-                    : 'border-gray-600 text-gray-400 hover:border-green-500/50 hover:bg-green-500/5 hover:text-green-500'
-                }`}
-              >
-                {company}
-              </button>
-            ))}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Company list - Horizontal scroll on mobile, vertical on desktop */}
+          <div className="lg:flex lg:flex-col lg:min-w-[200px]">
+            {/* Mobile: Horizontal scrolling tabs */}
+            <div className="flex lg:hidden overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
+              <div className="flex gap-2 min-w-max">
+                {Object.keys(companies).map((company) => (
+                  <button
+                    key={company}
+                    onClick={() => setSelectedCompany(company)}
+                    className={`whitespace-nowrap px-3 md:px-4 py-2 font-mono text-sm md:text-base transition-all duration-200 rounded-md border ${
+                      selectedCompany === company
+                        ? 'border-green-500 bg-green-500/10 text-green-500'
+                        : 'border-gray-600 text-gray-400 hover:border-green-500/50 hover:bg-green-500/5 hover:text-green-500'
+                    }`}
+                  >
+                    {company}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop: Vertical tabs */}
+            <div className="hidden lg:flex lg:flex-col">
+              {Object.keys(companies).map((company) => (
+                <button
+                  key={company}
+                  onClick={() => setSelectedCompany(company)}
+                  className={`text-left px-4 md:px-6 py-3 md:py-4 font-mono text-sm md:text-base transition-all duration-200 border-l-2 ${
+                    selectedCompany === company
+                      ? 'border-green-500 bg-green-500/10 text-green-500'
+                      : 'border-gray-600 text-gray-400 hover:border-green-500/50 hover:bg-green-500/5 hover:text-green-500'
+                  }`}
+                >
+                  {company}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Right side - Job details */}
-          <div className="flex-1 pl-8">
+          {/* Job details */}
+          <div className="flex-1 lg:pl-8">
             <div className="mb-6">
-            <h3 className="text-2xl font-light mb-2">
+              <h3 className="text-xl md:text-2xl font-light mb-2 leading-tight">
                 {companies[selectedCompany].role}{' '}
                 <span className="text-green-500">
-                    {/* Only show "@ ..." if the company IS NOT the fallback or is not empty */}
-                    {selectedCompany !== 'Open Source Contributor' && (
+                  {selectedCompany !== 'Open Source Contributor' && (
                     <>@ {selectedCompany}</>
-                    )}
-
+                  )}
                 </span>
-                </h3>
-              <p className="text-gray-400 font-mono text-sm">
+              </h3>
+              <p className="text-gray-400 font-mono text-sm md:text-base">
                 {companies[selectedCompany].period}
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {companies[selectedCompany].responsibilities.map((responsibility, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="text-green-500 mt-2 text-sm">▶</div>
-                  <p className="text-gray-300 leading-relaxed">
+                <div key={index} className="flex items-start gap-3 md:gap-4">
+                  <div className="text-green-500 mt-1.5 md:mt-2 text-sm flex-shrink-0">▶</div>
+                  <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                     {responsibility}
                   </p>
                 </div>
@@ -96,6 +116,16 @@ const Experience = () => {
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </div>
   );
 };

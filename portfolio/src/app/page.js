@@ -96,7 +96,7 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="block text-green-500 hover:text-green-600 font-mono">
+                <Link href="#contact" className="block text-green-500 hover:text-green-600 font-mono">
                   Contact
                 </Link>
               </li>

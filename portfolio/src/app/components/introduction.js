@@ -38,24 +38,22 @@ export default function Introduction() {
   }, [currentIndex, isDeleting, textIndex, texts]);
 
   return (
-    <div>
-      <main className="flex items-center min-h-screen px-16">
-        <div className="border-solid border-red-500"></div>
-        {/* Main content section */}
-        <section className="flex-grow px-6 max-w-4xl">
+    <div className="section">
+      <main className="container min-h-[calc(100vh-var(--section-spacing))] flex items-center">
+        <section className="w-full max-w-4xl mx-auto">
           {/* Introduction */}
-          <h5 className="text-green-500 font-mono">Hi, I am</h5>
-          <h1 className="text-5xl font-semibold mt-4">
+          <h5 className="text-green-500 font-mono text-lg md:text-xl">Hi, I am</h5>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mt-4">
             {displayText}
             <span className="animate-pulse text-green-500">|</span>
           </h1>
-          <h2 className="text-4xl font-semibold text-gray-500 mt-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-500 mt-4">
             I help machines learn.
           </h2>
-          <p className="text-gray-400 mt-4">
+          <p className="text-gray-400 mt-4 text-base md:text-lg max-w-2xl">
             I'm a Machine Learning Engineer developing production-ready AI models and integrating them into scalable backend services.
           </p>
-          <button className="font-mono inline-block px-6 py-4 font-semibold rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-colors duration-300 mb-12 mt-6">
+          <button className="font-mono inline-block px-4 md:px-6 py-3 md:py-4 font-semibold rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-colors duration-300 mt-6 md:mt-8">
             <Link href="https://medium.com/@rachit1031"
               target="_blank"
               rel="noopener noreferrer">

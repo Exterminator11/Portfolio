@@ -64,30 +64,32 @@ const Projects = () => {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex items-center mb-16">
-          <span className="text-green-500 font-mono text-xl mr-4">03.</span>
-          <h2 className="text-4xl font-semibold text-white mr-8">Some stuff I&apos;ve built</h2>
+    <div className="section bg-black text-white">
+      <div className="container">
+        <div className="flex items-center mb-8 md:mb-12">
+          <span className="text-green-500 font-mono text-lg md:text-xl mr-4">03.</span>
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mr-4 md:mr-8">Some stuff I&apos;ve built</h2>
           <div className="flex-1 h-px bg-green-500"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition-colors duration-300 flex flex-col h-full"
+              className="bg-slate-800 p-4 md:p-6 rounded-lg hover:bg-slate-700 transition-colors duration-300 flex flex-col h-full"
             >
               {/* Header with icons */}
-              <div className="flex justify-between items-start mb-4">
-                <Folder className="text-green-500 w-8 h-8" />
-                <div className="flex gap-3">
+              <div className="flex justify-between items-start mb-3 md:mb-4">
+                <Folder className="text-green-500 w-6 h-6 md:w-8 md:h-8" />
+                <div className="flex gap-2 md:gap-3">
                     {project.showGithub && showGithubLinks && (
                         <a
                         href={project.githubLink}
                         className="text-gray-400 hover:text-green-500 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         >
-                        <Github className="w-5 h-5" />
+                        <Github className="w-4 h-4 md:w-5 md:h-5" />
                         </a>
                     )}
 
@@ -95,39 +97,38 @@ const Projects = () => {
                         <a
                         href={project.externalLink}
                         className="text-gray-400 hover:text-green-500 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         >
-                        <ExternalLink className="w-5 h-5" />
+                        <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
                         </a>
                     )}
-
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold mb-3 text-white">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-white">
                 {project.featured && (
                     <span className="text-green-500">{project.title}</span>
                 )}
-
                 {!project.featured && project.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-grow">
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6 flex-grow">
                 {project.description}
               </p>
 
               {/* Technologies */}
-              <div className="flex flex-wrap gap-3 mt-auto">
+              <div className="flex flex-wrap gap-2 md:gap-3 mt-auto">
                 {project.technologies.map((tech, techIndex) => (
                     <span
                     key={techIndex}
-                    className="text-gray-400 text-xs font-mono">
+                    className="text-gray-400 text-xs md:text-sm font-mono">
                     {tech}
                     </span>
                 ))}
               </div>
-
             </div>
           ))}
         </div>
