@@ -4,6 +4,8 @@ import Experience from "./components/experience";
 import AboutMe from "./components/aboutMe";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import ThemeToggle from "./components/ThemeToggle";
+import BackToTop from "./components/BackToTop";
 import Link from "next/link";
 import { useState } from 'react';
 
@@ -49,14 +51,14 @@ export default function Home() {
 
         {/* CTA and External Links */}
         <div className="flex items-center space-x-4 flex-shrink-0">
-        <Link
-            href="https://docs.google.com/document/d/1bHRazMEQ6M3XOG4ksYPQkxggl4aU4XPnaOr9DiV0i3g/edit?usp=sharing"
+          <ThemeToggle />
+          <Link
+            href="https://drive.google.com/file/d/1V2bGUadtRtOBXGPfnF5rC0gRBo9la5AY/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-500 hover:text-green-600 font-mono transition-colors duration-200">
             Resume
           </Link>
-
         </div>
       </div>
 
@@ -66,14 +68,17 @@ export default function Home() {
           <Link href="/" className="text-green-500 hover:text-green-600 font-mono text-xl font-bold">
             Rachit Das
           </Link>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-green-500 hover:text-green-600 p-2">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
-          </button>
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-green-500 hover:text-green-600 p-2">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                  d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -101,13 +106,13 @@ export default function Home() {
                 </Link>
               </li>
               <li className="pt-2 border-t border-green-500/20">
-              <Link
-                href="https://drive.google.com/file/d/1M3Ee_GG65bQuaIkGPGi5qvE28fd1z1IH/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-500 hover:text-green-600 font-mono transition-colors duration-200">
-                Resume
-            </Link>
+                <Link
+                  href="https://drive.google.com/file/d/1V2bGUadtRtOBXGPfnF5rC0gRBo9la5AY/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 hover:text-green-600 font-mono transition-colors duration-200">
+                  Resume
+                </Link>
               </li>
             </ul>
           </nav>
@@ -119,6 +124,7 @@ export default function Home() {
     <div id="experience"><Experience/></div>
     <div id="projects"><Projects/></div>
     <div id="contact"><Contact/></div>
+    <BackToTop />
    </div>
   );
 }

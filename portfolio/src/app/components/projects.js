@@ -64,11 +64,11 @@ const Projects = () => {
   ];
 
   return (
-    <div className="section bg-black text-white">
+    <div className="section bg-background">
       <div className="container">
         <div className="flex items-center mb-8 md:mb-12">
           <span className="text-green-500 font-mono text-lg md:text-xl mr-4">03.</span>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mr-4 md:mr-8">Some stuff I&apos;ve built</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mr-4 md:mr-8">Some stuff I&apos;ve built</h2>
           <div className="flex-1 h-px bg-green-500"></div>
         </div>
 
@@ -76,16 +76,16 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-800 p-4 md:p-6 rounded-lg hover:bg-slate-700 transition-colors duration-300 flex flex-col h-full"
+              className="group bg-card-background p-4 md:p-6 rounded-lg hover:bg-hover-background transition-all duration-300 flex flex-col h-full border border-border-color hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/10 hover:border-green-500/50"
             >
               {/* Header with icons */}
               <div className="flex justify-between items-start mb-3 md:mb-4">
-                <Folder className="text-green-500 w-6 h-6 md:w-8 md:h-8" />
+                <Folder className="text-green-500 w-6 h-6 md:w-8 md:h-8 group-hover:scale-110 transition-transform duration-300" />
                 <div className="flex gap-2 md:gap-3">
                     {project.showGithub && showGithubLinks && (
                         <a
                         href={project.githubLink}
-                        className="text-gray-400 hover:text-green-500 transition-colors"
+                        className="text-muted-foreground hover:text-green-500 transition-colors transform hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
@@ -96,7 +96,7 @@ const Projects = () => {
                     {project.showExternal && showExternalLinks && (
                         <a
                         href={project.externalLink}
-                        className="text-gray-400 hover:text-green-500 transition-colors"
+                        className="text-muted-foreground hover:text-green-500 transition-colors transform hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
@@ -107,7 +107,7 @@ const Projects = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-white">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-foreground group-hover:text-green-500 transition-colors duration-300">
                 {project.featured && (
                     <span className="text-green-500">{project.title}</span>
                 )}
@@ -115,7 +115,7 @@ const Projects = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6 flex-grow">
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 md:mb-6 flex-grow">
                 {project.description}
               </p>
 
@@ -124,7 +124,7 @@ const Projects = () => {
                 {project.technologies.map((tech, techIndex) => (
                     <span
                     key={techIndex}
-                    className="text-gray-400 text-xs md:text-sm font-mono">
+                    className="text-muted-foreground text-xs md:text-sm font-mono group-hover:text-foreground transition-colors duration-300">
                     {tech}
                     </span>
                 ))}

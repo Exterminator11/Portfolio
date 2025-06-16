@@ -39,11 +39,11 @@ const Experience = () => {
   };
 
   return (
-    <div className="section bg-black text-white">
+    <div className="section bg-background">
       <div className="container">
         <div className="flex items-center mb-8 md:mb-12">
           <span className="text-green-500 font-mono text-lg md:text-xl mr-4">02.</span>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mr-4 md:mr-8">Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mr-4 md:mr-8">Experience</h2>
           <div className="flex-1 h-px bg-green-500"></div>
         </div>
         
@@ -60,7 +60,7 @@ const Experience = () => {
                     className={`whitespace-nowrap px-3 md:px-4 py-2 font-mono text-sm md:text-base transition-all duration-200 rounded-md border ${
                       selectedCompany === company
                         ? 'border-green-500 bg-green-500/10 text-green-500'
-                        : 'border-gray-600 text-gray-400 hover:border-green-500/50 hover:bg-green-500/5 hover:text-green-500'
+                        : 'border-border-color text-muted-foreground hover:border-green-500/50 hover:bg-green-500/5 hover:text-green-500'
                     }`}
                   >
                     {company}
@@ -78,7 +78,7 @@ const Experience = () => {
                   className={`text-left px-4 md:px-6 py-3 md:py-4 font-mono text-sm md:text-base transition-all duration-200 border-l-2 ${
                     selectedCompany === company
                       ? 'border-green-500 bg-green-500/10 text-green-500'
-                      : 'border-gray-600 text-gray-400 hover:border-green-500/50 hover:bg-green-500/5 hover:text-green-500'
+                      : 'border-border-color text-muted-foreground hover:border-green-500/50 hover:bg-green-500/5 hover:text-green-500'
                   }`}
                 >
                   {company}
@@ -90,7 +90,7 @@ const Experience = () => {
           {/* Job details */}
           <div className="flex-1 lg:pl-8">
             <div className="mb-6">
-              <h3 className="text-xl md:text-2xl font-light mb-2 leading-tight">
+              <h3 className="text-xl md:text-2xl font-light mb-2 leading-tight text-foreground">
                 {companies[selectedCompany].role}{' '}
                 <span className="text-green-500">
                   {selectedCompany !== 'Open Source Contributor' && (
@@ -98,7 +98,7 @@ const Experience = () => {
                   )}
                 </span>
               </h3>
-              <p className="text-gray-400 font-mono text-sm md:text-base">
+              <p className="text-muted-foreground font-mono text-sm md:text-base">
                 {companies[selectedCompany].period}
               </p>
             </div>
@@ -107,7 +107,7 @@ const Experience = () => {
               {companies[selectedCompany].responsibilities.map((responsibility, index) => (
                 <div key={index} className="flex items-start gap-3 md:gap-4">
                   <div className="text-green-500 mt-1.5 md:mt-2 text-sm flex-shrink-0">▶</div>
-                  <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                     {responsibility}
                   </p>
                 </div>

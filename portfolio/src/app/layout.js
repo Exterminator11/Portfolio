@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
+import { ThemeProvider } from './context/ThemeContext';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,18 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Rachits Portfolio",
+  title: "Rachit's Portfolio",
   description: "Rachit Das - Machine Learning Engineer",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-200`}
       >
-        {children}
-        <Analytics />
+        <ThemeProvider>
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

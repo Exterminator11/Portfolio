@@ -18,12 +18,12 @@ export default function AboutMe() {
     const rightTech = technologies.filter(tech => tech.category === 'right');
   
     return (
-      <section className="section bg-black text-white">
+      <section className="section bg-card-background text-card-foreground">
         <div className="container">
           {/* Section Header */}
           <div className="flex items-center mb-12 md:mb-16">
             <span className="text-green-500 font-mono text-lg md:text-xl mr-4">01.</span>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white mr-4 md:mr-8">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-foreground mr-4 md:mr-8">About Me</h2>
             <div className="flex-1 h-px bg-green-500"></div>
           </div>
   
@@ -31,18 +31,18 @@ export default function AboutMe() {
           <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-start">
             {/* Text Content - Takes up 2 columns */}
             <div className="md:col-span-2 space-y-4 md:space-y-6">
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Hello! My name is Rachit, and I&apos;m passionate about turning data into powerful, adaptable, and production-ready AI systems. My journey started with building a zero-day attack detection system that&apos;s when I fell in love with the way machine learning can solve real-world problems. From there, I went on to develop a search platform powered by large language models and implemented neural collaborative filtering networks to enable personalized recommendations, further fueling my passion for integrating cutting-edge technologies into scalable services.
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              Hi, I&apos;m Rachit—a passionate engineer dedicated to transforming data into powerful, production-ready AI systems that solve real-world challenges. My journey began with developing a zero-day attack detection system, an experience that ignited my fascination with machine learning's potential to tackle complex problems. This initial spark led me to build a search platform powered by large language models and implement neural collaborative filtering networks for personalized recommendations, deepening my expertise in integrating cutting-edge technologies into scalable solutions.
               </p>
   
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                 Fast-forward to today, and I&apos;ve had the privilege of working at
-                {' '}a <span className="text-green-500">data first company</span>, and 
+                {' '}a <span className="text-green-500">data native company</span>, and 
                 {' '}a <span className="text-green-500">consulting firm</span>. 
-                My main focus these days is creating scalable backend services powered by machine learning, turning innovative ideas into reliable, high-impact products.
+                Currently, I focus on model development, ML optimization, and interpretability while creating scalable backend services that transform innovative AI concepts into reliable, high-impact products. As an incoming Master's student at George Washington University, I'm excited to deepen my expertise and continue pushing the boundaries of what's possible with machine learning.
               </p>
 
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                 Here are a few technologies I&apos;ve been working with recently:
               </p>
   
@@ -52,7 +52,7 @@ export default function AboutMe() {
                   {leftTech.map((tech, index) => (
                     <div key={index} className="flex items-center">
                       <span className="text-green-500 mr-3">▶</span>
-                      <span className="text-gray-200 font-mono text-sm md:text-base">{tech.name}</span>
+                      <span className="text-foreground font-mono text-sm md:text-base">{tech.name}</span>
                     </div>
                   ))}
                 </div>
@@ -60,7 +60,7 @@ export default function AboutMe() {
                   {rightTech.map((tech, index) => (
                     <div key={index} className="flex items-center">
                       <span className="text-green-500 mr-3">▶</span>
-                      <span className="text-gray-200 font-mono text-sm md:text-base">{tech.name}</span>
+                      <span className="text-foreground font-mono text-sm md:text-base">{tech.name}</span>
                     </div>
                   ))}
                 </div>
@@ -73,8 +73,7 @@ export default function AboutMe() {
               <div className="absolute -inset-1 border-2 border-green-500 rounded-lg"></div>
               
               {/* Image container */}
-              <div className="relative w-full aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                
+              <div className="relative w-full aspect-square bg-hover-background rounded-lg overflow-hidden">
                 <Image
                   src="/profile.jpeg"
                   alt="Image"
