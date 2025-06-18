@@ -32,7 +32,7 @@ export default function AboutMe() {
             {/* Text Content - Takes up 2 columns */}
             <div className="md:col-span-2 space-y-4 md:space-y-6">
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Hi, I&apos;m Rachit, <span className='text-green-500'>3x national hackathon winner</span>, <span className='text-green-500'>5x finalist</span>  and an incoming <span className='text-green-500'>CS graduate student</span> at <span className='text-green-500'>The George Washington University</span>. I've developed machine learning based zero day attack systems with a research paper supporting it. Working on a recommendation system using small language models and clustering algorithms and training GAN's.
+              Hi, I&apos;m Rachit, <span className='text-green-500'>3x national hackathon winner</span>, <span className='text-green-500'>5x finalist</span>  and an incoming <span className='text-green-500'>CS graduate student</span> at <span className='text-green-500'>The George Washington University</span>. I've developed machine learning based zero day attack systems with a research paper supporting it. Working on a recommendation system using small language models and training GAN's.
               </p>
 
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
