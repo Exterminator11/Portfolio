@@ -32,14 +32,7 @@ export default function AboutMe() {
             {/* Text Content - Takes up 2 columns */}
             <div className="md:col-span-2 space-y-4 md:space-y-6">
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Hi, I&apos;m Rachit—a passionate engineer dedicated to transforming data into powerful, production-ready AI systems that solve real-world challenges. My journey began with developing a zero-day attack detection system, an experience that ignited my fascination with machine learning's potential to tackle complex problems. This initial spark led me to build a search platform powered by large language models and implement neural collaborative filtering networks for personalized recommendations, deepening my expertise in integrating cutting-edge technologies into scalable solutions.
-              </p>
-  
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                Fast-forward to today, and I&apos;ve had the privilege of working at
-                {' '}a <span className="text-green-500">data native company</span>, and 
-                {' '}a <span className="text-green-500">consulting firm</span>. 
-                Currently, I focus on model development, ML optimization, and interpretability while creating scalable backend services that transform innovative AI concepts into reliable, high-impact products. As an incoming Master's student at George Washington University, I'm excited to deepen my expertise and continue pushing the boundaries of what's possible with machine learning.
+              Hi, I&apos;m Rachit, <span className='text-green-500'>3x national hackathon winner</span>, <span className='text-green-500'>5x finalist</span>  and an incoming <span className='text-green-500'>CS graduate student</span> at <span className='text-green-500'>The George Washington University</span>. I've developed machine learning based zero day attack systems with a research paper supporting it. Working on a recommendation system using small language models and clustering algorithms and training GAN's.
               </p>
 
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
