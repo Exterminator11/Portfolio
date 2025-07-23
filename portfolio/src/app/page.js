@@ -53,7 +53,7 @@ export default function Home() {
         <div className="flex items-center space-x-4 flex-shrink-0">
           <ThemeToggle />
           <Link
-            href="https://drive.google.com/file/d/1V2bGUadtRtOBXGPfnF5rC0gRBo9la5AY/view?usp=sharing"
+            href="https://drive.google.com/file/d/1wfHEsupglVxzoBmSNi9hAYq0TybHvEHg/view?usp=share_link"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-500 hover:text-green-600 font-mono transition-colors duration-200">
